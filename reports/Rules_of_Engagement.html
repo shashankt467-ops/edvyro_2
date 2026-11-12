@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rules of Engagement (ROE) – Safe Cybersecurity Practice Lab</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+      @bottom-right {
+        content: counter(page);
+        font-family: Arial, sans-serif;
+        font-size: 9pt;
+        color: #64748b;
+      }
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 10pt;
+      line-height: 1.5;
+      color: #0f172a;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .header-banner {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+    .header-subtitle {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #059669;
+      margin-top: 4px;
+    }
+    .classification-tag {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 4px 10px;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #334155;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+      font-size: 9pt;
+    }
+    .meta-table th, .meta-table td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 10px;
+    }
+    .meta-table th {
+      background-color: #f8fafc;
+      text-align: left;
+      font-weight: 700;
+      color: #334155;
+      width: 25%;
+    }
+    .meta-table td {
+      background-color: #ffffff;
+      color: #0f172a;
+    }
+    h2 {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 4px;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    p, ul, ol {
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .highlight-box {
+      background-color: #f8fafc;
+      border-left: 4px solid #059669;
+      padding: 10px 14px;
+      margin: 10px 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 9.5pt;
+    }
+    .warning-box {
+      background-color: #fef2f2;
+      border-left: 4px solid #dc2626;
+      padding: 10px 14px;
+      margin: 10px 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 9.5pt;
+      color: #991b1b;
+    }
+    .rule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 9pt;
+    }
+    .rule-table th, .rule-table td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 10px;
+      vertical-align: top;
+    }
+    .rule-table th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .tag-permitted {
+      color: #059669;
+      font-weight: 700;
+    }
+    .tag-prohibited {
+      color: #dc2626;
+      font-weight: 700;
+    }
+    .signature-card {
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 14px;
+      margin-top: 16px;
+      background: #fafafa;
+      page-break-inside: avoid;
+    }
+    .sig-row {
+      display: flex;
+      margin-bottom: 12px;
+      align-items: flex-end;
+    }
+    .sig-label {
+      width: 190px;
+      font-weight: 700;
+      font-size: 9pt;
+      color: #334155;
+    }
+    .sig-line {
+      flex: 1;
+      border-bottom: 1px solid #64748b;
+      height: 20px;
+    }
+    .footer-note {
+      margin-top: 24px;
+      font-size: 8pt;
+      color: #64748b;
+      text-align: center;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-banner">
+    <div>
+      <h1 class="header-title">Rules of Engagement (ROE)</h1>
+      <div class="header-subtitle">Isolated Cybersecurity Practice &amp; Security Testing Agreement</div>
+    </div>
+    <div class="classification-tag">Restricted / Lab Practice Only</div>
+  </div>
+
+  <!-- METADATA TABLE -->
+  <table class="meta-table">
+    <tr>
+      <th>Document Identifier</th>
+      <td>SEC-ROE-LAB-2026-V1</td>
+      <th>Target Application</th>
+      <td>OWASP Juice Shop (v17+)</td>
+    </tr>
+    <tr>
+      <th>Authorization Scope</th>
+      <td>Localhost Loopback Only (127.0.0.1:3000)</td>
+      <th>Virtualization Layer</th>
+      <td>Docker Engine (Bridge Network)</td>
+    </tr>
+    <tr>
+      <th>Governing Law Compliance</th>
+      <td>US CFAA (18 U.S.C. § 1030) / UK Computer Misuse Act</td>
+      <th>Effective Date</th>
+      <td>November 12, 2026</td>
+    </tr>
+  </table>
+
+  <!-- SECTION 1 -->
+  <h2>1. Purpose and Objectives</h2>
+  <p>
+    The purpose of this document is to establish a rigorous, legally compliant, and technically sound operational framework for conducting application security assessments, penetration testing practice, and vulnerability research. This document serves as the governing agreement defining the boundaries of authorized activity.
+  </p>
+  <ul>
+    <li>Provide hands-on training in application security using standard industry methodologies (OWASP Top 10).</li>
+    <li>Ensure that all practice remains 100% contained within a dedicated, isolated virtualization sandbox.</li>
+    <li>Instill a professional code of ethics and legal accountability prior to performing any vulnerability assessment.</li>
+  </ul>
+
+  <!-- SECTION 2 & 3 -->
+  <h2>2. Authorized Testing Environment &amp; 3. Target Application</h2>
+  <p>
+    Security testing is authorized <strong>exclusively</strong> on the local containerized environment described below:
+  </p>
+  <ul>
+    <li><strong>Host Workstation:</strong> Student Personal Local Machine.</li>
+    <li><strong>Virtualization Platform:</strong> Docker / Docker Desktop via Bridge Network Driver.</li>
+    <li><strong>Target Application:</strong> OWASP Juice Shop (Docker Image: <code>bkimminich/juice-shop</code>).</li>
+    <li><strong>Application Technology:</strong> Node.js (Express), SQLite database, Angular SPA.</li>
+  </ul>
+
+  <!-- SECTION 4 -->
+  <h2>4. Target URL &amp; Network Endpoint</h2>
+  <div class="highlight-box">
+    <strong>MANDATORY TARGET URL:</strong> <code>http://localhost:3000</code> &nbsp;|&nbsp; <code>http://127.0.0.1:3000</code><br>
+    <strong>HOST SOCKET BINDING:</strong> <code>127.0.0.1:3000 (TCP)</code><br>
+    <em>Under no circumstance shall testing be targeted at an external domain name, public IP, or LAN address.</em>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2>5. Scope of Authorization</h2>
+  <table class="rule-table">
+    <tr>
+      <th style="width: 50%;">In-Scope (Strictly Authorized)</th>
+      <th style="width: 50%;">Out-of-Scope (Strictly Prohibited)</th>
+    </tr>
+    <tr>
+      <td>
+        • Local Docker container: <code>juice-shop</code> (<code>127.0.0.1:3000</code>)<br>
+        • Local browser / proxy on loopback interface (<code>127.0.0.1:8080</code>)<br>
+        • Official OWASP Juice Shop challenge scoreboard endpoints<br>
+        • Simulated client-side and server-side logic flaws within the container
+      </td>
+      <td>
+        • Any public IP, cloud service, domain name, or remote server<br>
+        • University, campus, school, or corporate Wi-Fi/LAN networks<br>
+        • Host machine operating system, kernel, BIOS, and host registry<br>
+        • Physical network routers, gateways, DNS servers, and switches<br>
+        • Docker daemon socket (breakout attempts)
+      </td>
+    </tr>
+  </table>
+
+  <!-- SECTION 6 & 7 -->
+  <h2>6. Permitted Testing Activities vs. 7. Prohibited Activities</h2>
+  <table class="rule-table">
+    <tr>
+      <th style="width: 20%;">Category</th>
+      <th style="width: 40%;">Permitted Activities (<span class="tag-permitted">AUTHORIZED</span>)</th>
+      <th style="width: 40%;">Prohibited Activities (<span class="tag-prohibited">FORBIDDEN</span>)</th>
+    </tr>
+    <tr>
+      <td><strong>Application Vulnerabilities</strong></td>
+      <td>
+        • SQL Injection in designated challenge fields<br>
+        • Cross-Site Scripting (benign alert/log)<br>
+        • Authentication bypass on local mock accounts<br>
+        • Insecure Direct Object Reference (IDOR)<br>
+        • Local parameter tampering &amp; JWT inspection
+      </td>
+      <td>
+        • Destructive database commands (<code>DROP TABLE</code>)<br>
+        • Browser crashing / infinite popup loops<br>
+        • Malicious external payload downloads<br>
+        • Reverse shells reaching out to external WAN<br>
+        • Ransomware / malware installation
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Network &amp; Scanning</strong></td>
+      <td>
+        • Single-thread HTTP testing via Burp/ZAP<br>
+        • Manual browser developer tools inspection<br>
+        • Localhost socket inspection (<code>docker port</code>)
+      </td>
+      <td>
+        • Denial-of-Service (DoS/DDoS) floods<br>
+        • High-speed brute-force saturating host CPU<br>
+        • Network packet sniffing outside loopback<br>
+        • Port scanning university / public IP ranges
+      </td>
+    </tr>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 8 -->
+  <h2>8. Network Restrictions</h2>
+  <p>
+    1. <strong>Strict Loopback:</strong> The target must remain bound exclusively to <code>127.0.0.1</code>. Wildcard <code>0.0.0.0</code> is forbidden.<br>
+    2. <strong>No Port Forwarding:</strong> Home router NAT forwarding, UPnP, or DMZ hosting must never be enabled for port 3000.<br>
+    3. <strong>No Public Bridging:</strong> The container must not be bridged directly to a public or wireless network interface.
+  </p>
+
+  <!-- SECTION 9 -->
+  <h2>9. Data Handling Requirements</h2>
+  <p>
+    1. <strong>Synthetic Data Only:</strong> All accounts, credentials, and transactions used during testing must be synthetic/mock data.<br>
+    2. <strong>Artifact Sanitization:</strong> All screenshots and reports prepared for academic submission must be sanitized to remove private host paths, real user credentials, or API keys.<br>
+    3. <strong>Ephemeral Storage:</strong> Upon conclusion of the academic evaluation, all temporary container data should be cleanly removed.
+  </p>
+
+  <!-- SECTION 10 -->
+  <h2>10. Mandatory Stop Conditions</h2>
+  <div class="warning-box">
+    <strong>STOP TESTING IMMEDIATELY IF:</strong>
+    <ol style="margin-top: 4px; margin-bottom: 0;">
+      <li>Any tool or payload establishes an outbound connection to an external or unfamiliar IP address.</li>
+      <li>The container port becomes accessible from another machine on the LAN or the Internet.</li>
+      <li>Host system experiences extreme CPU/RAM degradation, thermal throttling, or OS instability.</li>
+      <li>You discover any real-world personal identifying information (PII) or production keys.</li>
+      <li>Any uncertainty arises regarding whether an action falls within the authorized scope.</li>
+    </ol>
+  </div>
+
+  <!-- SECTION 11 -->
+  <h2>11. Incident Response &amp; Containment Procedure</h2>
+  <div class="highlight-box">
+    <strong>STEP 1 (CONTAIN):</strong> Immediately run <code>docker stop juice-shop</code>.<br>
+    <strong>STEP 2 (ISOLATE):</strong> Disconnect host from local network (disable Wi-Fi / unplug Ethernet).<br>
+    <strong>STEP 3 (LOG):</strong> Preserve container logs: <code>docker logs juice-shop &gt; containment-log.txt</code>.<br>
+    <strong>STEP 4 (ESCALATE):</strong> Notify the academic instructor/advisor in writing within 2 hours.<br>
+    <strong>STEP 5 (PURGE):</strong> Execute <code>docker rm -f juice-shop</code> and await written re-authorization.
+  </div>
+
+  <!-- SECTION 12 & 13 -->
+  <h2>12. Responsible Disclosure &amp; 13. Personal Authorization Declaration</h2>
+  <p>
+    I, the undersigned student practitioner, acknowledge that performing security testing without explicit authorization constitutes a criminal offense under federal and international law. I declare that all my testing will remain strictly confined to the locally isolated target on <code>127.0.0.1:3000</code>.
+  </p>
+
+  <!-- SECTION 14: SIGNATURE BLOCK -->
+  <h2>14. Execution &amp; Signature Section</h2>
+  <div class="signature-card">
+    <div style="font-weight: 800; font-size: 10pt; color: #0f172a; margin-bottom: 12px; text-transform: uppercase;">
+      Student Lab Practitioner Declaration
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Student Full Name:</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Student ID / Roll Number:</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Academic Institution:</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Host Operating System:</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Date (YYYY-MM-DD):</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-row" style="margin-bottom: 0;">
+      <div class="sig-label">Student Signature:</div>
+      <div class="sig-line"></div>
+    </div>
+  </div>
+
+  <div class="signature-card" style="margin-top: 14px;">
+    <div style="font-weight: 800; font-size: 10pt; color: #0f172a; margin-bottom: 12px; text-transform: uppercase;">
+      Academic Supervisor / Lab Instructor Review
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Instructor Full Name:</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Department / Title:</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-row">
+      <div class="sig-label">Review Status:</div>
+      <div style="flex: 1; font-size: 9pt; padding-top: 4px;">
+        [ &nbsp; ] APPROVED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ &nbsp; ] REJECTED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ &nbsp; ] PENDING AMENDMENT
+      </div>
+    </div>
+    <div class="sig-row" style="margin-bottom: 0;">
+      <div class="sig-label">Supervisor Signature &amp; Date:</div>
+      <div class="sig-line"></div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Document ID: SEC-ROE-LAB-2026-V1 &nbsp;|&nbsp; Academic Integrity Standard &nbsp;|&nbsp; Safe Cybersecurity Practice Environment
+  </div>
+
+</body>
+</html>
+

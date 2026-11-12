@@ -1,0 +1,144 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 5258 >>
+stream
+q 0.05 0.08 0.15 rg 0 805 595.28 37 re f Q
+q 0.06 0.73 0.51 rg 0 801 595.28 4 re f Q
+BT /F2 13 Tf 1 1 1 rg 35 818 Td (RULES OF ENGAGEMENT \(ROE\) - SAFE CYBERSECURITY LAB) Tj ET
+BT /F3 8 Tf 0.7 0.9 0.8 rg 480 820 Td (SEC-ROE-LAB-2026-V1) Tj ET
+BT /F2 10 Tf 0.05 0.08 0.15 rg 40 778 Td (ACADEMIC & PROFESSIONAL CYBERSECURITY PRACTICE AGREEMENT) Tj ET
+BT /F1 8.5 Tf 0.3 0.35 0.45 rg 40 764 Td (Target Application: OWASP Juice Shop \(v17+\) | Host Socket: 127.0.0.1:3000 | Status: RESTRICTED) Tj ET
+q 0.8 0.85 0.9 RG 1 w 40 754 m 555 754 l S Q
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 736 Td (1. PURPOSE AND OBJECTIVES) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 722 Td (This Rules of Engagement document establishes the binding operational parameters for conducting safe,) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 710 Td (legal, and isolated application security testing. All activities must strictly adhere to the defined target scope.) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 690 Td (2. AUTHORIZED TESTING ENVIRONMENT & 3. TARGET SPECIFICATION) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 676 Td (Target Host: Localhost Workstation only. Virtualization: Docker Bridge Network \(172.17.0.0/16\).) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 664 Td (Target Container: bkimminich/juice-shop running Node.js Express, Angular SPA, and SQLite database.) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 644 Td (4. TARGET URL & NETWORK ENDPOINT) Tj ET
+q 0.95 0.98 0.96 rg 40 606 515 30 re f Q
+q 0.06 0.73 0.51 RG 1 w 40 606 515 30 re S Q
+BT /F3 8.5 Tf 0.02 0.3 0.2 rg 50 623 Td (AUTHORIZED TARGET URL: http://localhost:3000   OR   http://127.0.0.1:3000) Tj ET
+BT /F3 8.5 Tf 0.02 0.3 0.2 rg 50 611 Td (HOST SOCKET BINDING:   127.0.0.1:3000 \(TCP Loopback Only - RFC 1122 Compliance\)) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 588 Td (5. SCOPE OF AUTHORIZATION) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 574 Td (IN-SCOPE:     Local container juice-shop \(127.0.0.1:3000\), local proxy \(127.0.0.1:8080\), Juice Shop challenges.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 562 Td (OUT-OF-SCOPE: Any public IP, corporate/campus Wi-Fi, host operating system, router, or external domain.) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 542 Td (6. PERMITTED ACTIVITIES VS. 7. PROHIBITED ACTIVITIES) Tj ET
+BT /F2 8.5 Tf 0.05 0.46 0.35 rg 40 528 Td (PERMITTED TESTING ACTIVITIES \(AUTHORIZED\):) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 516 Td (  [+] OWASP Top 10 web vulnerabilities within Juice Shop scoreboard \(SQLi, XSS, Broken Auth, IDOR\).) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 504 Td (  [+] Single-threaded manual traffic inspection with browser developer tools or local proxy \(Burp/ZAP\).) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 492 Td (  [+] Benign proof-of-concept payloads \(e.g. alert boxes, non-destructive SELECT queries\).) Tj ET
+BT /F2 8.5 Tf 0.8 0.1 0.1 rg 40 474 Td (STRICTLY PROHIBITED ACTIVITIES \(FORBIDDEN\):) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 462 Td (  [-] Testing unauthorized external websites, public IPs, or corporate/university infrastructure.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 450 Td (  [-] Denial-of-Service \(DoS/DDoS\) stress testing, network flooding, or host CPU/RAM exhaustion.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 438 Td (  [-] Stealing or modifying real user data; attempting container breakouts or host OS exploitation.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 426 Td (  [-] Binding to 0.0.0.0, enabling router port forwarding, or broadcasting over local Wi-Fi.) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 406 Td (8. NETWORK RESTRICTIONS & 9. DATA HANDLING) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 392 Td (Testing must strictly remain on 127.0.0.1. Only synthetic mock data provided by Juice Shop may be tested.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 380 Td (All screenshots and reports must be sanitized to eliminate personal directories or credentials.) Tj ET
+BT /F2 9.5 Tf 0.8 0.1 0.1 rg 40 360 Td (10. MANDATORY STOP CONDITIONS) Tj ET
+q 0.99 0.95 0.95 rg 40 308 515 44 re f Q
+q 0.8 0.1 0.1 RG 1 w 40 308 515 44 re S Q
+BT /F1 8 Tf 0.6 0.05 0.05 rg 50 338 Td (1. Unexpected outbound network connection to an external or unfamiliar IP address.) Tj ET
+BT /F1 8 Tf 0.6 0.05 0.05 rg 50 326 Td (2. Accidental exposure or reachability of port 3000 from another machine on the LAN or Internet.) Tj ET
+BT /F1 8 Tf 0.6 0.05 0.05 rg 50 314 Td (3. Unexpected host operating system degradation, extreme saturation, or discovery of real-world PII.) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 288 Td (11. INCIDENT RESPONSE PROCEDURE) Tj ET
+q 0.96 0.97 0.99 rg 40 218 515 62 re f Q
+q 0.2 0.4 0.7 RG 1 w 40 218 515 62 re S Q
+BT /F3 8 Tf 0.1 0.2 0.4 rg 50 266 Td (Step 1: CONTAIN    -> docker stop juice-shop) Tj ET
+BT /F3 8 Tf 0.1 0.2 0.4 rg 50 254 Td (Step 2: DISCONNECT -> Disconnect host machine from local Wi-Fi / LAN immediately.) Tj ET
+BT /F3 8 Tf 0.1 0.2 0.4 rg 50 242 Td (Step 3: LOGS       -> Capture container logs: docker logs juice-shop > containment-log.txt) Tj ET
+BT /F3 8 Tf 0.1 0.2 0.4 rg 50 230 Td (Step 4: ESCALATE   -> Notify academic supervisor / instructor in writing within 2 hours.) Tj ET
+q 0.8 0.85 0.9 RG 1 w 40 50 m 555 50 l S Q
+BT /F1 7.5 Tf 0.4 0.45 0.5 rg 40 38 Td (Document ID: SEC-ROE-LAB-2026-V1  |  Page 1 of 2  |  Safe Cybersecurity Practice Environment) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 6 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 3656 >>
+stream
+q 0.05 0.08 0.15 rg 0 805 595.28 37 re f Q
+q 0.06 0.73 0.51 rg 0 801 595.28 4 re f Q
+BT /F2 13 Tf 1 1 1 rg 35 818 Td (RULES OF ENGAGEMENT - DECLARATION & SIGNATURES) Tj ET
+BT /F3 8 Tf 0.7 0.9 0.8 rg 515 820 Td (PAGE 2 OF 2) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 775 Td (12. RESPONSIBLE DISCLOSURE PRINCIPLES) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 760 Td (All findings within this educational laboratory are documented for defensive learning and root-cause analysis.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 748 Td (In external contexts, discovered vulnerabilities must be coordinated through sanctioned disclosure channels.) Tj ET
+BT /F2 9.5 Tf 0.05 0.46 0.35 rg 40 725 Td (13. PERSONAL AUTHORIZATION DECLARATION) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 710 Td (I, the undersigned student practitioner, hereby declare:) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 696 Td (  1. I have read, understood, and agreed to abide strictly by this Rules of Engagement document.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 682 Td (  2. I recognize that performing penetration testing techniques against systems without explicit authorization) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 668 Td (     is a criminal offense under the US Computer Fraud and Abuse Act \(CFAA\) and international legislation.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 654 Td (  3. I will restrict all assessment activities exclusively to the locally isolated target: 127.0.0.1:3000.) Tj ET
+BT /F1 8 Tf 0.15 0.2 0.25 rg 40 640 Td (  4. I will immediately execute incident containment if any unauthorized anomaly occurs.) Tj ET
+BT /F2 10.5 Tf 0.05 0.08 0.15 rg 40 615 Td (14. SIGNATURE SECTION) Tj ET
+BT /F1 8 Tf 0.4 0.45 0.5 rg 40 600 Td (The fields below must be completed with genuine personal details prior to beginning laboratory testing.) Tj ET
+q 0.98 0.98 0.99 rg 40 380 515 205 re f Q
+q 0.8 0.85 0.9 RG 1 w 40 380 515 205 re S Q
+BT /F2 9.5 Tf 0.05 0.08 0.15 rg 55 565 Td (STUDENT LAB PRACTITIONER) Tj ET
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 538 Td (Student Full Name:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 538 m 530 538 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 510 Td (Student ID / Roll No:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 510 m 530 510 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 482 Td (Academic Institution:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 482 m 530 482 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 454 Td (Host Operating System:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 454 m 530 454 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 426 Td (Date \(YYYY-MM-DD\):) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 426 m 530 426 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 398 Td (Student Signature:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 398 m 530 398 l S Q
+q 0.98 0.98 0.99 rg 40 185 515 175 re f Q
+q 0.8 0.85 0.9 RG 1 w 40 185 515 175 re S Q
+BT /F2 9.5 Tf 0.05 0.08 0.15 rg 55 342 Td (LAB SUPERVISOR / ACADEMIC ADVISOR) Tj ET
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 315 Td (Supervisor Name:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 315 m 530 315 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 287 Td (Department / Title:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 287 m 530 287 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 259 Td (Review Status:) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.35 rg 185 259 Td ([   ] APPROVED      [   ] REJECTED      [   ] PENDING AMENDMENT) Tj ET
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 231 Td (Approval Date:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 231 m 530 231 l S Q
+BT /F2 8.5 Tf 0.2 0.25 0.35 rg 55 203 Td (Advisor Signature:) Tj ET
+q 0.5 0.5 0.5 RG 0.8 w 180 203 m 530 203 l S Q
+q 0.8 0.85 0.9 RG 1 w 40 50 m 555 50 l S Q
+BT /F1 7.5 Tf 0.4 0.45 0.5 rg 40 38 Td (Document ID: SEC-ROE-LAB-2026-V1  |  Page 2 of 2  |  Academic Evaluation & Portfolio Standard) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 8 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000334 00000 n 
+0000005644 00000 n 
+0000005796 00000 n 
+0000009503 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+9655
+%%EOF

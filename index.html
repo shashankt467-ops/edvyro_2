@@ -2,15 +2,830 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=legal-scope-isolated-security-lab/index.html">
-  <title>Legal Scope and Isolated Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Scope and Isolated Lab – Safe Cybersecurity Practice Environment</title>
+  <meta name="description" content="Professional laboratory documentation and verification platform for isolated application security training using OWASP Juice Shop and Docker.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'><path d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z'/></svg>">
 </head>
-<body style="background-color: #070d18; color: #f8fafc; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
-  <div style="text-align: center;">
-    <h2>Legal Scope and Isolated Lab – Safe Cybersecurity Practice Environment</h2>
-    <p>Redirecting to laboratory portal...</p>
-    <p><a href="legal-scope-isolated-security-lab/index.html" style="color: #10b981;">Click here if not redirected automatically</a></p>
+<body>
+
+  <!-- ==================== SIDEBAR NAVIGATION ==================== -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-badge">SEC</div>
+      <div>
+        <div class="sidebar-title">CYBER LAB PORTAL</div>
+        <div class="sidebar-subtitle">SAFE SANDBOX v1.0</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#overview" class="nav-item active">
+        <span class="nav-num">01</span>
+        <span>Overview</span>
+      </a>
+      <a href="#architecture" class="nav-item">
+        <span class="nav-num">02</span>
+        <span>Lab Architecture</span>
+      </a>
+      <a href="#setup" class="nav-item">
+        <span class="nav-num">03</span>
+        <span>Lab Setup Guide</span>
+      </a>
+      <a href="#isolation" class="nav-item">
+        <span class="nav-num">04</span>
+        <span>Network Isolation</span>
+      </a>
+      <a href="#roe" class="nav-item">
+        <span class="nav-num">05</span>
+        <span>Rules of Engagement</span>
+      </a>
+      <a href="#evidence" class="nav-item">
+        <span class="nav-num">06</span>
+        <span>Evidence Collection</span>
+      </a>
+      <a href="#verification" class="nav-item">
+        <span class="nav-num">07</span>
+        <span>Final Verification</span>
+      </a>
+      <a href="#submission" class="nav-item">
+        <span class="nav-num">08</span>
+        <span>Submission Package</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-indicator">
+        <div class="status-dot"></div>
+        <span>ISOLATION: 127.0.0.1 ONLY</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT AREA ==================== -->
+  <div class="main-content">
+    
+    <!-- TOP STICKY BAR -->
+    <header class="top-bar">
+      <div class="top-bar-title">
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+        <span>Legal Scope and Isolated Lab</span>
+        <span class="badge-tag badge-secure">ACADEMIC AUDIT READY</span>
+      </div>
+      <div class="top-bar-actions">
+        <span id="top-bar-verify-badge" class="badge-tag badge-warning">0% VERIFIED</span>
+        <a href="reports/Rules_of_Engagement.pdf" target="_blank" class="btn-sm btn-secondary">
+          <span>📄 ROE PDF</span>
+        </a>
+        <a href="#verification" class="btn-sm btn-primary">
+          <span>✔ Checklist</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <main class="content-container">
+
+      <!-- ==================== 1. OVERVIEW ==================== -->
+      <section id="overview" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 01</span>
+            <span class="badge-tag badge-info">PROJECT OBJECTIVE</span>
+          </div>
+          <h1 class="section-title">Legal Scope and Isolated Practice Environment</h1>
+          <p class="section-desc">
+            A comprehensive, beginner-friendly cybersecurity laboratory establishing strict legal authorization boundaries, container virtualization isolation, and RFC 1122 loopback socket controls for practicing application vulnerability assessment.
+          </p>
+        </div>
+
+        <!-- METRICS CARDS -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-label">Target System</div>
+            <div class="metric-value">OWASP Juice Shop</div>
+            <div class="metric-desc">Node.js / SQLite / Angular SPA (v17+)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Socket Binding</div>
+            <div class="metric-value" style="color: var(--emerald-light); font-family: var(--font-mono);">127.0.0.1:3000</div>
+            <div class="metric-desc">Restricted strictly to host loopback interface</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Virtualization Layer</div>
+            <div class="metric-value">Docker Bridge</div>
+            <div class="metric-desc">Isolated bridge subnet (172.17.0.0/16)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Legal Scope Status</div>
+            <div class="metric-value" style="color: var(--cyan);">Defined ROE</div>
+            <div class="metric-desc">CFAA &amp; Computer Misuse Act compliant</div>
+          </div>
+        </div>
+
+        <!-- EXECUTIVE SUMMARY CONTENT -->
+        <div class="code-window" style="background-color: var(--bg-card); border-color: var(--border-color);">
+          <div class="code-header">
+            <div class="code-dots">
+              <span class="code-dot code-dot-red"></span>
+              <span class="code-dot code-dot-yellow"></span>
+              <span class="code-dot code-dot-green"></span>
+            </div>
+            <div class="code-title">lab-manifest.yml – Core Specifications</div>
+            <span class="badge-tag badge-secure">VALIDATED SPEC</span>
+          </div>
+          <div class="code-body" style="color: #cbd5e1;">
+<span class="comment"># Safe Cybersecurity Practice Environment Specification</span>
+<span class="cmd">project_name</span>: "Legal Scope and Isolated Lab – Safe Cybersecurity Practice Environment"
+<span class="cmd">target_application</span>: "bkimminich/juice-shop"
+<span class="cmd">runtime_network</span>: "bridge"
+<span class="cmd">host_ip_binding</span>: "127.0.0.1"
+<span class="cmd">host_port</span>: 3000
+<span class="cmd">inbound_lan_exposure</span>: <span style="color: #ef4444; font-weight: bold;">BLOCKED</span>
+<span class="cmd">inbound_wan_exposure</span>: <span style="color: #ef4444; font-weight: bold;">BLOCKED</span>
+<span class="cmd">authorization_framework</span>: "Formal 14-Section Rules of Engagement (SEC-ROE-LAB-2026-V1)"
+<span class="cmd">academic_integrity</span>: "Non-repudiable genuine evidence capture required"
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 2. LAB ARCHITECTURE ==================== -->
+      <section id="architecture" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 02</span>
+            <span class="badge-tag badge-info">LAB TOPOLOGY</span>
+          </div>
+          <h2 class="section-title">Lab Architecture &amp; Virtualization Boundary</h2>
+          <p class="section-desc">
+            The lab isolates the deliberately vulnerable container inside a virtual network namespace on the host machine. Inbound connections are restricted strictly to the kernel loopback interface.
+          </p>
+        </div>
+
+        <!-- ARCHITECTURE WARNING CALLOUT -->
+        <div class="alert-card alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div>
+            <div class="alert-title">CRITICAL ARCHITECTURAL WARNING: LOCALHOST BINDING != AIR-GAPPED ENVIRONMENT</div>
+            <div class="alert-desc">
+              A localhost-only Docker port binding (<code>-p 127.0.0.1:3000:3000</code>) ring-fences the vulnerable service from inbound LAN and WAN packets, but <strong>it does not create a physically air-gapped system</strong>. The container still shares the host machine's operating system kernel, CPU, physical memory, and outbound routing table. Host-side processes (such as rogue browser extensions, malicious scripts, or local malware) and container Server-Side Request Forgery (SSRF) vectors can communicate across this boundary. Always inspect any exploit scripts prior to execution.
+            </div>
+          </div>
+        </div>
+
+        <!-- DIAGRAM DISPLAY CARD -->
+        <div class="diagram-wrapper">
+          <div class="diagram-toolbar">
+            <div class="diagram-title">System Topology: Host OS ➔ Loopback ➔ Docker Bridge ➔ Juice Shop</div>
+            <div style="display: flex; gap: 8px;">
+              <a href="diagrams/lab-topology.svg" download="lab-topology.svg" class="btn-sm btn-secondary">
+                <span>⬇ Download SVG</span>
+              </a>
+              <a href="diagrams/lab-topology.svg" target="_blank" class="btn-sm btn-primary">
+                <span>🔍 Open Full Size</span>
+              </a>
+            </div>
+          </div>
+          <div class="diagram-image-container">
+            <img src="diagrams/lab-topology.svg" alt="Lab Architecture Topology Diagram" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 3. LAB SETUP GUIDE ==================== -->
+      <section id="setup" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 03</span>
+            <span class="badge-tag badge-secure">STEP-BY-STEP DEPLOYMENT</span>
+          </div>
+          <h2 class="section-title">Lab Installation &amp; Configuration Guide</h2>
+          <p class="section-desc">
+            Follow this beginner-friendly procedure to deploy OWASP Juice Shop on your local workstation. Select your operating system below for tailored instructions.
+          </p>
+        </div>
+
+        <!-- OS SWITCHER TABS -->
+        <div class="tab-container">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="tab-windows">Windows 10 / 11 (PowerShell &amp; Docker Desktop)</button>
+            <button class="tab-btn" data-tab="tab-ubuntu">Ubuntu Linux (Docker Engine CLI)</button>
+          </div>
+
+          <!-- WINDOWS TAB -->
+          <div id="tab-windows" class="tab-pane active">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              
+              <!-- STEP 1 -->
+              <div>
+                <h3 style="font-size: 15px; font-weight: 700; color: var(--emerald-light); margin-bottom: 6px;">
+                  Step 1: Install &amp; Verify Docker Desktop
+                </h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                  Download and install Docker Desktop from the official portal with WSL 2 backend enabled. Verify that the Docker CLI communicates with the engine:
+                </p>
+                <div class="code-window">
+                  <div class="code-header">
+                    <span class="code-title">PowerShell (Admin or User)</span>
+                    <button class="code-copy-btn">Copy</button>
+                  </div>
+                  <div class="code-body">
+                    <span class="cmd">docker</span> --version<br>
+                    <span class="cmd">docker</span> info
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+              <div>
+                <h3 style="font-size: 15px; font-weight: 700; color: var(--emerald-light); margin-bottom: 6px;">
+                  Step 2: Download the Official OWASP Juice Shop Image
+                </h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                  Pull the pre-compiled, audited Docker image maintained by the OWASP foundation:
+                </p>
+                <div class="code-window">
+                  <div class="code-header">
+                    <span class="code-title">PowerShell</span>
+                    <button class="code-copy-btn">Copy</button>
+                  </div>
+                  <div class="code-body">
+                    <span class="cmd">docker</span> pull bkimminich/juice-shop
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+              <div>
+                <h3 style="font-size: 15px; font-weight: 700; color: var(--emerald-light); margin-bottom: 6px;">
+                  Step 3: Run the Application with Localhost-Only Port Binding
+                </h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                  Execute the container in detached mode, attached to the default bridge network, with port 3000 bound exclusively to <code>127.0.0.1</code>:
+                </p>
+                <div class="code-window">
+                  <div class="code-header">
+                    <span class="code-title">PowerShell (Critical Isolation Command)</span>
+                    <button class="code-copy-btn">Copy</button>
+                  </div>
+                  <div class="code-body">
+                    <span class="cmd">docker</span> run <span class="flag">-d</span> <span class="flag">--name</span> juice-shop <span class="flag">--network</span> bridge <span class="flag">-p</span> 127.0.0.1:3000:3000 bkimminich/juice-shop
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 4 -->
+              <div>
+                <h3 style="font-size: 15px; font-weight: 700; color: var(--emerald-light); margin-bottom: 6px;">
+                  Step 4: Open the Application in Your Web Browser
+                </h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                  Navigate to the loopback URL. Verify the storefront and challenge board load correctly:
+                </p>
+                <div class="code-window">
+                  <div class="code-header">
+                    <span class="code-title">Target Browser URL</span>
+                    <button class="code-copy-btn">Copy</button>
+                  </div>
+                  <div class="code-body">
+                    <span class="cmd">Start-Process</span> "http://localhost:3000"
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 5 & 6 -->
+              <div>
+                <h3 style="font-size: 15px; font-weight: 700; color: var(--emerald-light); margin-bottom: 6px;">
+                  Step 5 &amp; 6: Verify Container Runtime &amp; Socket Port Binding
+                </h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                  Audit the Docker daemon state to confirm the container is active and strictly bound to <code>127.0.0.1</code>:
+                </p>
+                <div class="code-window">
+                  <div class="code-header">
+                    <span class="code-title">PowerShell</span>
+                    <button class="code-copy-btn">Copy</button>
+                  </div>
+                  <div class="code-body">
+                    <span class="cmd">docker</span> ps <span class="flag">--filter</span> name=juice-shop<br>
+                    <span class="cmd">docker</span> port juice-shop<br>
+                    <span class="comment"># Expected Output:</span><br>
+                    <span class="output">3000/tcp -> 127.0.0.1:3000</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- UBUNTU TAB -->
+          <div id="tab-ubuntu" class="tab-pane">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div>
+                <h3 style="font-size: 15px; font-weight: 700; color: var(--emerald-light); margin-bottom: 6px;">
+                  Ubuntu Linux (22.04 / 24.04 LTS) Docker Engine Setup
+                </h3>
+                <div class="code-window">
+                  <div class="code-header">
+                    <span class="code-title">Bash Terminal</span>
+                    <button class="code-copy-btn">Copy</button>
+                  </div>
+                  <div class="code-body">
+                    <span class="comment"># 1. Update packages and install Docker CE</span><br>
+                    <span class="cmd">sudo</span> apt update &amp;&amp; <span class="cmd">sudo</span> apt install -y docker.io<br>
+                    <span class="cmd">sudo</span> systemctl enable --now docker<br><br>
+                    <span class="comment"># 2. Pull official image</span><br>
+                    <span class="cmd">docker</span> pull bkimminich/juice-shop<br><br>
+                    <span class="comment"># 3. Run with strict localhost isolation</span><br>
+                    <span class="cmd">docker</span> run <span class="flag">-d</span> <span class="flag">--name</span> juice-shop <span class="flag">--network</span> bridge <span class="flag">-p</span> 127.0.0.1:3000:3000 bkimminich/juice-shop<br><br>
+                    <span class="comment"># 4. Audit port binding</span><br>
+                    <span class="cmd">docker</span> port juice-shop<br>
+                    <span class="comment"># 5. Socket check</span><br>
+                    <span class="cmd">ss</span> -tulpn | grep 3000
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMMAND FLAG EXPLANATIONS TABLE -->
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--text-primary); margin-top: 32px; margin-bottom: 12px;">
+          Command Flag Security Anatomy
+        </h3>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Flag / Parameter</th>
+              <th>Argument</th>
+              <th>Operational &amp; Security Function</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>-d</code></td>
+              <td><em>None</em></td>
+              <td>Detached Mode: Executes container in the background, keeping terminal available.</td>
+            </tr>
+            <tr>
+              <td><code>--name</code></td>
+              <td><code>juice-shop</code></td>
+              <td>Labels the container for explicit lifecycle commands (<code>stop</code>, <code>rm</code>, <code>logs</code>).</td>
+            </tr>
+            <tr>
+              <td><code>--network</code></td>
+              <td><code>bridge</code></td>
+              <td>Attaches container to default isolated bridge subnet (<code>172.17.0.0/16</code>).</td>
+            </tr>
+            <tr>
+              <td><code>-p</code></td>
+              <td><code>127.0.0.1:3000:3000</code></td>
+              <td><strong>PRIMARY SECURITY CONTROL:</strong> Restricts host port 3000 socket binding strictly to loopback IP. Rejects any inbound connection from Wi-Fi or local area network.</td>
+            </tr>
+            <tr>
+              <td><em>Image</em></td>
+              <td><code>bkimminich/juice-shop</code></td>
+              <td>Downloads official OWASP container containing Node.js, SQLite, and Angular frontend.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- TROUBLESHOOTING ACCORDION -->
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--text-primary); margin-top: 28px; margin-bottom: 12px;">
+          Common Troubleshooting Scenarios
+        </h3>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>🔴 Error: "Bind for 127.0.0.1:3000 failed: port is already allocated"</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            Another service on your host machine is currently using port 3000. Identify the offending process in PowerShell with:
+            <code>Get-NetTCPConnection -LocalPort 3000</code> or in Linux with <code>sudo lsof -i :3000</code>. If an old Juice Shop container is already running, remove it with <code>docker rm -f juice-shop</code>.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>🔴 Error: "Cannot connect to the Docker daemon at unix:///var/run/docker.sock"</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            The Docker daemon background process is not active. On Windows, launch Docker Desktop and wait until the whale icon in the taskbar stays solid green. On Ubuntu, execute <code>sudo systemctl start docker</code>.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>⚠️ Hazard: "docker port juice-shop returns 0.0.0.0:3000"</span>
+            <span>+</span>
+          </button>
+          <div class="accordion-content">
+            <strong>CRITICAL SECURITY VIOLATION:</strong> You ran Docker with <code>-p 3000:3000</code> instead of <code>-p 127.0.0.1:3000:3000</code>. This exposes the vulnerable app to your entire local Wi-Fi network. Immediately run <code>docker rm -f juice-shop</code> and re-launch with the strict <code>127.0.0.1:</code> prefix.
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==================== 4. ISOLATION & NETWORK SECURITY ==================== -->
+      <section id="isolation" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 04</span>
+            <span class="badge-tag badge-warning">NETWORK ENGINEERING</span>
+          </div>
+          <h2 class="section-title">Network Isolation &amp; Socket Security Architecture</h2>
+          <p class="section-desc">
+            A technical breakdown of RFC 1122 loopback mechanics, Docker bridge address translation, and why external penetration testing is legally and operationally hazardous.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 24px;">
+          <div class="metric-card">
+            <div class="metric-label">RFC 1122 / 5735 Standard</div>
+            <div style="font-size: 15px; font-weight: 700; color: var(--emerald-light); margin-top: 4px;">127.0.0.0/8 Loopback Block</div>
+            <div class="metric-desc">
+              Packets addressed to 127.0.0.1 are processed entirely in host OS kernel memory. The operating system drops these packets before they reach physical Wi-Fi or Ethernet interfaces.
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">NAT Packet Forwarding</div>
+            <div style="font-size: 15px; font-weight: 700; color: var(--cyan); margin-top: 4px;">Host-to-Bridge Tunneling</div>
+            <div class="metric-desc">
+              Docker proxies connections received on <code>127.0.0.1:3000</code> across the virtual bridge interface into container IP <code>172.17.0.2:3000</code> without exposing the container to external routing.
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Legal Liability</div>
+            <div style="font-size: 15px; font-weight: 700; color: var(--rose); margin-top: 4px;">Zero External Authorization</div>
+            <div class="metric-desc">
+              Scanning public IPs or campus networks violates the Computer Fraud and Abuse Act (CFAA). All practice must remain strictly inside the local loopback boundary.
+            </div>
+          </div>
+        </div>
+
+        <!-- NETWORK ISOLATION COMPARISON DIAGRAM -->
+        <div class="diagram-wrapper">
+          <div class="diagram-toolbar">
+            <div class="diagram-title">Packet Flow Comparison: Safe 127.0.0.1 Binding vs. Hazardous 0.0.0.0 Binding</div>
+            <a href="diagrams/network-isolation.svg" target="_blank" class="btn-sm btn-secondary">
+              <span>🔍 Open Full Diagram</span>
+            </a>
+          </div>
+          <div class="diagram-image-container">
+            <img src="diagrams/network-isolation.svg" alt="Network Isolation Comparison Diagram" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 5. RULES OF ENGAGEMENT ==================== -->
+      <section id="roe" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 05</span>
+            <span class="badge-tag badge-danger">LEGAL COMPLIANCE</span>
+          </div>
+          <h2 class="section-title">Rules of Engagement (ROE) Document</h2>
+          <p class="section-desc">
+            The formal agreement governing security assessment activities. All 14 contractual sections are outlined below. A downloadable and printable PDF is provided for academic records.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+          <a href="reports/Rules_of_Engagement.pdf" target="_blank" class="btn-sm btn-primary">
+            <span>📥 Download Signed ROE PDF</span>
+          </a>
+          <a href="reports/Rules_of_Engagement.html" target="_blank" class="btn-sm btn-secondary">
+            <span>🖨 Printable Document View</span>
+          </a>
+          <a href="docs/Rules_of_Engagement.md" target="_blank" class="btn-sm btn-secondary">
+            <span>📝 Markdown Source</span>
+          </a>
+        </div>
+
+        <!-- 14 SECTIONS SUMMARY CARD -->
+        <div class="code-window" style="background-color: var(--bg-card); border-color: var(--border-color); padding: 24px;">
+          <h3 style="font-size: 16px; font-weight: 700; color: var(--emerald-light); margin-bottom: 12px;">
+            Document SEC-ROE-LAB-2026-V1 Summary Matrix
+          </h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; font-size: 12px; color: var(--text-secondary);">
+            <div>
+              <strong style="color: var(--text-primary);">1. Purpose:</strong> Controlled educational vulnerability training.<br>
+              <strong style="color: var(--text-primary);">2. Target Environment:</strong> Localhost Docker container only.<br>
+              <strong style="color: var(--text-primary);">3. Target Application:</strong> OWASP Juice Shop v17+.<br>
+              <strong style="color: var(--text-primary);">4. Authorized URL:</strong> <code>http://127.0.0.1:3000</code>.<br>
+              <strong style="color: var(--text-primary);">5. Scope:</strong> Container challenge scoreboard only.
+            </div>
+            <div>
+              <strong style="color: var(--emerald-light);">6. Permitted Activities:</strong> SQLi, XSS, broken auth, IDOR within challenge parameters.<br>
+              <strong style="color: var(--rose);">7. Prohibited Activities:</strong> Public IP scanning, DoS, brute-force saturating host, campus network attacks.<br>
+              <strong style="color: var(--text-primary);">8. Network Restrictions:</strong> Loopback socket only; no router port forwarding.<br>
+              <strong style="color: var(--text-primary);">9. Data Handling:</strong> Synthetic mock data only; sanitize screenshots.
+            </div>
+            <div>
+              <strong style="color: var(--amber);">10. Stop Conditions:</strong> External IP connection, LAN exposure, host instability.<br>
+              <strong style="color: var(--cyan);">11. Incident Containment:</strong> <code>docker stop juice-shop</code> &amp; disconnect LAN.<br>
+              <strong style="color: var(--text-primary);">12. Responsible Disclosure:</strong> Defensive documentation only.<br>
+              <strong style="color: var(--text-primary);">13. Declaration:</strong> Explicit acknowledgement of criminal liability.<br>
+              <strong style="color: var(--text-primary);">14. Signatures:</strong> Practitioner &amp; faculty advisor signature blocks.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 6. EVIDENCE COLLECTION ==================== -->
+      <section id="evidence" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 06</span>
+            <span class="badge-tag badge-secure">AUDIT PORTFOLIO</span>
+          </div>
+          <h2 class="section-title">Evidence Collection Gallery</h2>
+          <p class="section-desc">
+            To satisfy academic evaluation, the student must capture and deposit genuine terminal screenshots into <code>evidence/</code>. You can preview your local screenshots in the cards below before submitting.
+          </p>
+        </div>
+
+        <div class="alert-card alert-warning">
+          <div class="alert-icon">ℹ️</div>
+          <div>
+            <div class="alert-title">NON-REPUDIATION &amp; ACADEMIC HONESTY POLICY</div>
+            <div class="alert-desc">
+              Do not generate simulated terminal output or submit fake screenshots. Each artifact must be captured from your genuine host workstation running Docker.
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 EVIDENCE CARDS -->
+        <div class="evidence-grid">
+          
+          <!-- EVD-01 -->
+          <div class="evidence-card">
+            <div class="evidence-header">
+              <span class="evidence-id">EVD-01</span>
+              <span class="evidence-status">AWAITING CAPTURE</span>
+            </div>
+            <div class="evidence-title">Docker Engine Installation</div>
+            <div class="evidence-proves">
+              <strong>What it proves:</strong> Validates that Docker / Docker Desktop is installed, running with active daemon connectivity, and ready for container execution.
+            </div>
+            <button class="evidence-instr-toggle">▶ View Capture Instructions</button>
+            <div class="evidence-instr-content">
+              Run: <code>docker --version; docker info</code> in your host terminal. Capture the window displaying your terminal prompt, OS version, and Docker build. Save as <code>evidence/evd-01-docker-install.png</code>.
+            </div>
+            <div class="dropzone-placeholder">
+              <input type="file" accept="image/*" style="display: none;">
+              <img class="dropzone-preview" alt="EVD-01 Preview">
+              <div class="dropzone-prompt">
+                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-text">Click or drop genuine screenshot here to preview</div>
+                <div class="dropzone-hint">evidence/evd-01-docker-install.png</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EVD-02 -->
+          <div class="evidence-card">
+            <div class="evidence-header">
+              <span class="evidence-id">EVD-02</span>
+              <span class="evidence-status">AWAITING CAPTURE</span>
+            </div>
+            <div class="evidence-title">Container Runtime Execution State</div>
+            <div class="evidence-proves">
+              <strong>What it proves:</strong> Proves the <code>juice-shop</code> container is healthy, has not exited, and is executing in detached background mode.
+            </div>
+            <button class="evidence-instr-toggle">▶ View Capture Instructions</button>
+            <div class="evidence-instr-content">
+              Run: <code>docker ps -a --filter name=juice-shop</code>. Capture the table output displaying <code>STATUS: Up</code> and <code>NAMES: juice-shop</code>. Save as <code>evidence/evd-02-docker-ps.png</code>.
+            </div>
+            <div class="dropzone-placeholder">
+              <input type="file" accept="image/*" style="display: none;">
+              <img class="dropzone-preview" alt="EVD-02 Preview">
+              <div class="dropzone-prompt">
+                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-text">Click or drop genuine screenshot here to preview</div>
+                <div class="dropzone-hint">evidence/evd-02-docker-ps.png</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EVD-03 -->
+          <div class="evidence-card">
+            <div class="evidence-header">
+              <span class="evidence-id">EVD-03</span>
+              <span class="evidence-status">AWAITING CAPTURE</span>
+            </div>
+            <div class="evidence-title">Juice Shop Web Interface</div>
+            <div class="evidence-proves">
+              <strong>What it proves:</strong> Confirms the HTTP server inside the container is actively serving the Angular storefront to a browser on loopback.
+            </div>
+            <button class="evidence-instr-toggle">▶ View Capture Instructions</button>
+            <div class="evidence-instr-content">
+              Navigate to <code>http://localhost:3000</code> in your browser. Capture the full browser window showing the address bar and Juice Shop storefront. Save as <code>evidence/evd-03-juice-shop-web.png</code>.
+            </div>
+            <div class="dropzone-placeholder">
+              <input type="file" accept="image/*" style="display: none;">
+              <img class="dropzone-preview" alt="EVD-03 Preview">
+              <div class="dropzone-prompt">
+                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-text">Click or drop genuine screenshot here to preview</div>
+                <div class="dropzone-hint">evidence/evd-03-juice-shop-web.png</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EVD-04 -->
+          <div class="evidence-card">
+            <div class="evidence-header">
+              <span class="evidence-id">EVD-04</span>
+              <span class="evidence-status">AWAITING CAPTURE</span>
+            </div>
+            <div class="evidence-title">Localhost Port Binding Audit</div>
+            <div class="evidence-proves">
+              <strong>What it proves:</strong> Verifies the container socket is bound specifically to <code>127.0.0.1:3000</code> and is NOT exposed to <code>0.0.0.0</code> or the LAN.
+            </div>
+            <button class="evidence-instr-toggle">▶ View Capture Instructions</button>
+            <div class="evidence-instr-content">
+              Run: <code>docker port juice-shop</code>. Capture the terminal displaying <code>3000/tcp -> 127.0.0.1:3000</code>. Save as <code>evidence/evd-04-port-binding.png</code>.
+            </div>
+            <div class="dropzone-placeholder">
+              <input type="file" accept="image/*" style="display: none;">
+              <img class="dropzone-preview" alt="EVD-04 Preview">
+              <div class="dropzone-prompt">
+                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-text">Click or drop genuine screenshot here to preview</div>
+                <div class="dropzone-hint">evidence/evd-04-port-binding.png</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EVD-05 -->
+          <div class="evidence-card">
+            <div class="evidence-header">
+              <span class="evidence-id">EVD-05</span>
+              <span class="evidence-status">AWAITING CAPTURE</span>
+            </div>
+            <div class="evidence-title">Lab Topology Architecture Diagram</div>
+            <div class="evidence-proves">
+              <strong>What it proves:</strong> Demonstrates technical comprehension of the host-to-container boundary, bridge networking, and network isolation warnings.
+            </div>
+            <button class="evidence-instr-toggle">▶ View Capture Instructions</button>
+            <div class="evidence-instr-content">
+              Open <code>diagrams/lab-topology.svg</code> in your browser. Verify all nodes and the critical warning banner are clear. Capture and save as <code>evidence/evd-05-lab-topology.png</code>.
+            </div>
+            <div class="dropzone-placeholder">
+              <input type="file" accept="image/*" style="display: none;">
+              <img class="dropzone-preview" alt="EVD-05 Preview">
+              <div class="dropzone-prompt">
+                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-text">Click or drop genuine screenshot here to preview</div>
+                <div class="dropzone-hint">evidence/evd-05-lab-topology.png</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EVD-06 -->
+          <div class="evidence-card">
+            <div class="evidence-header">
+              <span class="evidence-id">EVD-06</span>
+              <span class="evidence-status">AWAITING CAPTURE</span>
+            </div>
+            <div class="evidence-title">Signed Rules of Engagement Document</div>
+            <div class="evidence-proves">
+              <strong>What it proves:</strong> Validates personal legal acknowledgement, ethical pledge, and mutual authorization before launching any test.
+            </div>
+            <button class="evidence-instr-toggle">▶ View Capture Instructions</button>
+            <div class="evidence-instr-content">
+              Complete the practitioner signature section in <code>reports/Rules_of_Engagement.pdf</code> with your genuine student name and signature. Capture the signed block and save as <code>evidence/evd-06-signed-roe.png</code>.
+            </div>
+            <div class="dropzone-placeholder">
+              <input type="file" accept="image/*" style="display: none;">
+              <img class="dropzone-preview" alt="EVD-06 Preview">
+              <div class="dropzone-prompt">
+                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-text">Click or drop genuine screenshot here to preview</div>
+                <div class="dropzone-hint">evidence/evd-06-signed-roe.png</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== 7. FINAL VERIFICATION ==================== -->
+      <section id="verification" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 07</span>
+            <span class="badge-tag badge-secure">INTERACTIVE CHECKLIST</span>
+          </div>
+          <h2 class="section-title">Final Laboratory Verification Checklist</h2>
+          <p class="section-desc">
+            Manually verify each configuration milestone as you execute the setup on your host machine. Your progress is dynamically calculated and saved locally.
+          </p>
+        </div>
+
+        <div class="verification-dashboard">
+          <div class="progress-header">
+            <div>
+              <div class="progress-title">Practitioner Milestone Progress</div>
+              <div id="checklist-progress-count" style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+                0 of 10 Tasks Verified
+              </div>
+            </div>
+            <div id="checklist-progress-percent" class="progress-percent">0%</div>
+          </div>
+
+          <div class="progress-track">
+            <div id="checklist-progress-fill" class="progress-bar-fill"></div>
+          </div>
+
+          <div id="checklist-items-container" class="checklist-items">
+            <!-- Dynamic JavaScript Injected Tasks -->
+          </div>
+
+          <div class="checklist-actions">
+            <button id="reset-checklist-btn" class="btn-sm btn-secondary">
+              <span>↺ Reset Checklist</span>
+            </button>
+            <button id="export-report-btn" class="btn-sm btn-primary">
+              <span>📋 Export Verification Report (.txt)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 8. SUBMISSION PACKAGE ==================== -->
+      <section id="submission" class="section-block">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-id">SECTION 08</span>
+            <span class="badge-tag badge-info">GITHUB PORTFOLIO</span>
+          </div>
+          <h2 class="section-title">Final Submission &amp; Repository Structure</h2>
+          <p class="section-desc">
+            The project adheres to professional GitHub repository standards suitable for academic evaluation and cybersecurity engineering portfolio review.
+          </p>
+        </div>
+
+        <!-- REPO TREE VISUALIZER -->
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-title">Repository Tree Structure: legal-scope-isolated-security-lab/</span>
+            <span class="badge-tag badge-secure">STANDARDIZED LAYOUT</span>
+          </div>
+          <div class="code-body" style="color: #94a3b8;">
+legal-scope-isolated-security-lab/
+├── <span style="color: #38bdf8; font-weight: bold;">README.md</span>                         <span class="comment"># Master Project Documentation & Portfolio Overview</span>
+├── <span style="color: #34d399; font-weight: bold;">index.html</span>                        <span class="comment"># Interactive Cybersecurity Lab Dashboard</span>
+├── css/
+│   └── <span style="color: #cbd5e1;">style.css</span>                     <span class="comment"># Professional Dark Navy & Emerald Styling</span>
+├── js/
+│   └── <span style="color: #cbd5e1;">app.js</span>                        <span class="comment"># Dynamic Verification Checklist & Dropzones</span>
+├── docs/
+│   ├── <span style="color: #38bdf8;">Rules_of_Engagement.md</span>        <span class="comment"># 14-Section Formal Legal Rules of Engagement</span>
+│   ├── <span style="color: #38bdf8;">Lab_Setup_Guide.md</span>            <span class="comment"># Cross-Platform Installation Guide (Windows/Ubuntu)</span>
+│   ├── <span style="color: #38bdf8;">Network_Isolation.md</span>          <span class="comment"># Technical Analysis of Loopback vs Wildcard</span>
+│   └── <span style="color: #38bdf8;">Safety_Policy.md</span>              <span class="comment"># Zero-Harm Principle & Safe Payload Guidelines</span>
+├── diagrams/
+│   ├── <span style="color: #a7f3d0;">lab-topology.svg</span>              <span class="comment"># Draw.io-Compatible Lab Architecture Diagram</span>
+│   └── <span style="color: #a7f3d0;">network-isolation.svg</span>         <span class="comment"># Vector Packet Flow Comparison Diagram</span>
+├── evidence/
+│   └── <span style="color: #fcd34d;">evidence-checklist.md</span>         <span class="comment"># Master Evidence Tracking Manifest & Audit Trail</span>
+└── reports/
+    ├── <span style="color: #f87171;">Rules_of_Engagement.pdf</span>      <span class="comment"># Publication-Quality PDF Rules of Engagement</span>
+    └── <span style="color: #cbd5e1;">Rules_of_Engagement.html</span>     <span class="comment"># Clean Printable Document Template</span>
+          </div>
+        </div>
+
+        <!-- GIT COMMANDS -->
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--text-primary); margin-top: 28px; margin-bottom: 12px;">
+          Commands to Publish Repository to GitHub
+        </h3>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-title">Terminal Git Commands</span>
+            <button class="code-copy-btn">Copy</button>
+          </div>
+          <div class="code-body">
+            <span class="comment"># 1. Initialize git in repository folder</span><br>
+            <span class="cmd">git</span> init<br><br>
+            <span class="comment"># 2. Stage all documentation, diagrams, evidence, and code</span><br>
+            <span class="cmd">git</span> add .<br><br>
+            <span class="comment"># 3. Create initial commit</span><br>
+            <span class="cmd">git</span> commit <span class="flag">-m</span> "feat: complete legal scope and isolated cybersecurity practice lab"<br><br>
+            <span class="comment"># 4. Link to your GitHub repository</span><br>
+            <span class="cmd">git</span> remote add origin https://github.com/&lt;your-username&gt;/legal-scope-isolated-security-lab.git<br>
+            <span class="cmd">git</span> branch <span class="flag">-M</span> main<br>
+            <span class="cmd">git</span> push <span class="flag">-u</span> origin main
+          </div>
+        </div>
+
+      </section>
+
+    </main>
   </div>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
 
